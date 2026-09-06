@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account Menu - Khatri Shop</title>
+    <!-- Google Fonts & Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- CSS File -->
+    <link rel="stylesheet" href="./account-menu.css" />
+</head>
+<body>
+
+    <!-- User Profile Card (Photo Ke Bilkul Jaisa) -->
+    <div class="user-profile-card">
+        
+        <!-- Top Profile Info -->
+        <div class="user-info-header">
+            <div class="avatar-box">
+                <span class="material-symbols-outlined avatar-icon">person</span>
+            </div>
+            <div class="user-details">
+                <h3 class="user-name" id="userName">Hello User</h3>
+                <p class="user-phone" id="userPhone">+91 9982765756</p>
+            </div>
+        </div>
+
+        <div class="menu-divider"></div>
+
+        <!-- Menu Links -->
+        <ul class="user-menu-list">
+            <li>
+                <a href="./orders.html" class="menu-item">
+                    <span class="material-symbols-outlined menu-icon">shopping_bag</span>
+                    <span class="menu-text">My Orders</span>
+                </a>
+            </li>
+
+            <div class="menu-divider"></div>
+
+            <li>
+                <button type="button" class="menu-item" id="btnDeleteAccount">
+                    <span class="menu-text delete-text">Delete Account</span>
+                </button>
+            </li>
+
+            <div class="menu-divider"></div>
+
+            <li>
+                <button type="button" class="menu-item" id="btnLogout">
+                    <span class="material-symbols-outlined menu-icon">logout</span>
+                    <span class="menu-text">Logout</span>
+                </button>
+            </li>
+        </ul>
+
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="./account-menu.js"></script>
+</body>
+</html>

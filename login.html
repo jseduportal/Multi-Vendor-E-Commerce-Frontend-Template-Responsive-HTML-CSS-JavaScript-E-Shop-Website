@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login / Sign Up - Khatri Shop</title>
+    <!-- Google Fonts & Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="./login.css" />
+</head>
+<body>
+
+    <div class="login-wrapper">
+        <!-- Header / Logo Link -->
+        <div class="brand-header">
+            <a href="./index.html">
+                <h1>Khatri Shop</h1>
+            </a>
+            <p>Welcome back! Please login to your account.</p>
+        </div>
+
+        <!-- Tab Toggle Buttons -->
+        <div class="tab-box">
+            <button class="tab-btn active" id="loginTabBtn">Login</button>
+            <button class="tab-btn" id="signupTabBtn">Register</button>
+        </div>
+
+        <!-- LOGIN FORM -->
+        <form class="auth-form active" id="loginForm">
+            <div class="input-group">
+                <label for="loginEmail">Email / Mobile Number</label>
+                <div class="input-field">
+                    <span class="material-symbols-outlined icon">mail</span>
+                    <input type="text" id="loginEmail" placeholder="Enter your email or mobile" required />
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="loginPassword">Password</label>
+                <div class="input-field">
+                    <span class="material-symbols-outlined icon">lock</span>
+                    <input type="password" id="loginPassword" placeholder="Enter your password" required />
+                    <span class="material-symbols-outlined toggle-password" id="toggleLoginPass">visibility_off</span>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <label class="remember-me">
+                    <input type="checkbox" id="rememberMe" />
+                    <span>Remember me</span>
+                </label>
+                <a href="#" class="forgot-link">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="submit-btn">Login to Account</button>
+        </form>
+
+        <!-- REGISTER FORM -->
+        <form class="auth-form" id="signupForm">
+            <div class="input-group">
+                <label for="signupName">Full Name</label>
+                <div class="input-field">
+                    <span class="material-symbols-outlined icon">person</span>
+                    <input type="text" id="signupName" placeholder="Enter full name" required />
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="signupEmail">Email Address</label>
+                <div class="input-field">
+                    <span class="material-symbols-outlined icon">mail</span>
+                    <input type="email" id="signupEmail" placeholder="name@example.com" required />
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="signupPhone">Mobile Number</label>
+                <div class="input-field">
+                    <span class="material-symbols-outlined icon">call</span>
+                    <input type="tel" id="signupPhone" placeholder="10-digit mobile number" required />
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="signupPassword">Create Password</label>
+                <div class="input-field">
+                    <span class="material-symbols-outlined icon">lock</span>
+                    <input type="password" id="signupPassword" placeholder="At least 6 characters" required />
+                    <span class="material-symbols-outlined toggle-password" id="toggleSignupPass">visibility_off</span>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Create Account</button>
+        </form>
+
+        <!-- Social Login -->
+        <div class="divider">
+            <span>OR</span>
+        </div>
+
+        <div class="social-login">
+            <button class="social-btn google-btn">
+                <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" />
+                Continue with Google
+            </button>
+        </div>
+
+        <div class="back-home">
+            <a href="./index.html">&larr; Back to Shopping</a>
+        </div>
+    </div>
+
+    <!-- JavaScript Link -->
+    <script src="./login.js"></script>
+</body>
+</html>

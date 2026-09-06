@@ -1,0 +1,265 @@
+:root {
+    --primary-color: #0d6efd;
+    --primary-hover: #0b5ed7;
+    --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --text-muted: #6c757d;
+    --border-color: #e0e0e0;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Card Container */
+.login-wrapper {
+    background: var(--card-bg);
+    width: 100%;
+    max-width: 440px;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+/* Brand Header */
+.brand-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.brand-header a {
+    text-decoration: none;
+}
+
+.brand-header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.brand-header p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+/* Tabs */
+.tab-box {
+    display: flex;
+    background: #f1f3f5;
+    padding: 4px;
+    border-radius: 10px;
+    margin-bottom: 24px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background: var(--card-bg);
+    color: var(--primary-color);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Forms */
+.auth-form {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.auth-form.active {
+    display: flex;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-group label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.input-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-field .icon {
+    position: absolute;
+    left: 12px;
+    color: var(--text-muted);
+    font-size: 20px;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 12px 40px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-field input:focus {
+    border-color: var(--primary-color);
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 20px;
+    user-select: none;
+}
+
+/* Actions Row */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.82rem;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+.forgot-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* Submit Button */
+.submit-btn {
+    background: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 6px;
+}
+
+.submit-btn:hover {
+    background: var(--primary-hover);
+}
+
+/* Divider */
+.divider {
+    text-align: center;
+    margin: 20px 0 16px 0;
+    position: relative;
+}
+
+.divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--border-color);
+}
+
+.divider span {
+    position: relative;
+    background: var(--card-bg);
+    padding: 0 12px;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+/* Social Login */
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: #ffffff;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.social-btn:hover {
+    background: #f8f9fa;
+}
+
+.social-btn img {
+    width: 18px;
+    height: 18px;
+}
+
+/* Back Home */
+.back-home {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-home a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.back-home a:hover {
+    color: var(--primary-color);
+}

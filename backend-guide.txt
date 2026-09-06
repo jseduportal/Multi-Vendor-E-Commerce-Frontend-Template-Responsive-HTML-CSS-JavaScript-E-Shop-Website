@@ -1,0 +1,73 @@
+🛠️ Backend Integration aur Setup Guide (Hindi me)
+Is website me abhi sirf Frontend (HTML, CSS, aur JavaScript) hai. Website ko live chalane, order receive karne, users ka data save karne aur online payment lene ke liye isme Backend aur Database jorna padega.
+
+Niche diye gaye steps ko follow karke aap easily backend set kar sakte hain:
+
+📌 Step 1: Technology Chunein
+Backend ke liye inme se koi ek option chun sakte hain:
+
+Node.js + Express.js (Sabse best aur aasan kyunki ye JavaScript par kaam karta hai)
+
+Python (Django / Flask)
+
+PHP (Laravel)
+
+Database ke liye:
+
+MongoDB (NoSQL - E-commerce products ke liye sabse sahi)
+
+MySQL / PostgreSQL
+
+📌 Step 2: Main Features Jinme Backend Chahiye
+Website ke alag-alag parts me backend ki zaroorat yahan hai:
+
+1. User Login / Signup
+Files: account-menu.html, account-menu.js
+
+Kaam: Naye user ko register karne aur login karne ke liye API routes banayein. User session manage karne ke liye JWT (JSON Web Token) ka use karein.
+
+2. Product Management (Dynamic Products)
+Files: clothing.html, electronics.html, accessories.html, etc.
+
+Kaam: Static products ki jagah Database me products table banayein (Product Name, Price, Image URL, Stock). API ke zariye frontend par data dikhayein.
+
+3. Cart System
+Files: cart.html, cart.js
+
+Kaam: User ke cart items ko database me save karein taaki page refresh karne par items gayab na ho.
+
+4. Checkout & Order Management (Sabse Important)
+Kaam: User ka address aur order details database ke orders table me save karein. Order confirm hone par email/SMS bhejne ke liye Nodemailer lagayein.
+
+5. Payment Gateway
+Kaam: Online payment ke liye Razorpay ya Stripe ka API backend me integrate karein.
+
+📌 Step 3: Frontend ko Backend se Kaise Jodein?
+Apni JavaScript files (cart.js, clothing.js, etc.) me fetch() ya axios ka use karke backend se data mangwayein:
+
+JavaScript
+async function loadProducts() {
+    try {
+        const response = await fetch('http://localhost:5000/api/products');
+        const products = await response.json();
+        console.log(products);
+    } catch (error) {
+        console.error("Error loading products:", error);
+    }
+}
+loadProducts();
+🖼️ Image Size aur Lagane ke Niyam (Image Guidelines)
+Sahi Size (Dimensions):
+Product Cards / Listing: 500 × 500 pixels (Square size, grid ke liye best).
+
+Hero Banners: 1920 × 1080 pixels (Bade banners ke liye).
+
+File Size Optimization:
+Har image ka size 150KB se 300KB ke beech hona chahiye taaki website tezi se khule.
+
+Images ko WebP format me rakhein aur TinyPNG se compress karein.
+
+Images Kaise Save aur Upload Karein:
+Local Storage (Simple): Images ko project ke /assets/images/ folder me rakhein aur database me sirf rasta (path) save karein (jaise: /images/shirt1.jpg).
+
+Cloud Storage (Recommended): Cloudinary ya AWS S3 ka use karein. Jab admin product upload kare, image cloud par save ho aur uska secure URL database me store ho jaye.
